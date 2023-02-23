@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   resources :gardens, only: [:index, :show] do
     resources :plants, only: [:create]
   end
+
+  resources :plants do
+    resources :plant_tags, only: [:new, :create]
+  end
 end

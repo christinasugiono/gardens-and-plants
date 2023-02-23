@@ -1,7 +1,9 @@
-<h1>Gardens List</h1>
+<div class="container my-4">
+  <h1>Gardens List</h1>
 
-<ul>
-  <% @gardens.each do |garden| %>
-    <%= link_to garden.name, garden_path(garden) %>
-  <% end %>
-</ul>
+  <ul>
+    <% @gardens.each do |garden| %>
+      <li><%= link_to garden.name, garden_path(garden) %></li>
+    <% end %>
+  </ul>
+</div>
